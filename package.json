@@ -1,0 +1,31 @@
+{
+  "name": "novatopup-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Revolutionary Gaming Topup Platform with Cyberpunk UI",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "clean": "turbo run clean &amp;&amp; rm -rf node_modules",
+    "type-check": "turbo run type-check"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.3.0",
+    "prettier": "^3.3.3",
+    "turbo": "^2.3.0",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.14.4"
+}
