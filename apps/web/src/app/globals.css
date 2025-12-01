@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-deep-void text-white font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-orbitron;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Cyberpunk Grid Background */
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0, 245, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Neon Text Glow */
+  .text-neon-glow {
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.8),
+                 0 0 20px rgba(0, 245, 255, 0.6),
+                 0 0 30px rgba(0, 245, 255, 0.4);
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  /* Scrollbar Styling */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-deep-void;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-neon-cyan/30 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-neon-cyan/50;
+  }
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    to right,
+    rgba(0, 245, 255, 0) 0%,
+    rgba(0, 245, 255, 0.2) 50%,
+    rgba(0, 245, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+}
